@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from persona.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('agregar/',include('agregar.urls'))
+    path('', index,name='defauld'),
+    path('',include('persona.urls'))
 ]
